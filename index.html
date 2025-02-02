@@ -6,7 +6,21 @@
   <title>Stretching GIFs Blog</title>
 </head>
 <body>
-  <!-- Tabs Navigation -->
+  <!-- Header -->
+  <header>
+    <h1>Stretching Blog</h1>
+    <p>Your daily guide to stretching and flexibility</p>
+  </header>
+  
+  <!-- Navigation Bar -->
+  <nav>
+    <!-- These links can scroll to the different sections if you add corresponding anchors -->
+    <a href="#arms">Arms</a>
+    <a href="#legs">Legs</a>
+    <a href="#back">Back</a>
+  </nav>
+  
+  <!-- Tabs (using hidden radio buttons for CSS-only tab switching) -->
   <div class="tabs">
     <input type="radio" id="tab1" name="tabs" checked>
     <label for="tab1">Arms</label>
@@ -17,24 +31,43 @@
     <input type="radio" id="tab3" name="tabs">
     <label for="tab3">Back</label>
   </div>
-
-  <!-- Content for each tab -->
-  <div class="content content1">
-    <h2>Arms Stretching</h2>
-    <img src="images/arms1.gif" alt="Arms Stretch 1">
-    <img src="images/arms2.gif" alt="Arms Stretch 2">
+  
+  <!-- Main Content Area -->
+  <div class="content">
+    <!-- Arms Content -->
+    <div class="tab-content content1" id="arms">
+      <h2>Arms Stretching</h2>
+      <p>Discover different routines to improve your arm flexibility.</p>
+      <div class="gallery">
+        <img src="images/arms1.gif" alt="Arms Stretch 1">
+        <img src="images/arms2.gif" alt="Arms Stretch 2">
+      </div>
+    </div>
+    
+    <!-- Legs Content -->
+    <div class="tab-content content2" id="legs">
+      <h2>Legs Stretching</h2>
+      <p>Explore a variety of leg stretches to keep you mobile.</p>
+      <div class="gallery">
+        <img src="images/legs1.gif" alt="Legs Stretch 1">
+        <img src="images/legs2.gif" alt="Legs Stretch 2">
+      </div>
+    </div>
+    
+    <!-- Back Content -->
+    <div class="tab-content content3" id="back">
+      <h2>Back Stretching</h2>
+      <p>Learn effective back stretches to ease tension.</p>
+      <div class="gallery">
+        <img src="images/back1.gif" alt="Back Stretch 1">
+        <img src="images/back2.gif" alt="Back Stretch 2">
+      </div>
+    </div>
   </div>
-
-  <div class="content content2">
-    <h2>Legs Stretching</h2>
-    <img src="images/legs1.gif" alt="Legs Stretch 1">
-    <img src="images/legs2.gif" alt="Legs Stretch 2">
-  </div>
-
-  <div class="content content3">
-    <h2>Back Stretching</h2>
-    <img src="images/back1.gif" alt="Back Stretch 1">
-    <img src="images/back2.gif" alt="Back Stretch 2">
-  </div>
+  
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Stretching Blog. All rights reserved.</p>
+  </footer>
 </body>
 </html>
