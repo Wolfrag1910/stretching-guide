@@ -1,66 +1,136 @@
-/* Basic page styling */
- body {
-   font-family: Arial, sans-serif;
-   margin: 0;
-   padding: 0;
-   background: #f5f5f5;
- }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
- /* Container for the tabs */
- .tabs {
-   display: flex;
-   border-bottom: 1px solid #ccc;
-   background: #e9e9e9;
- }
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
 
- /* Style for each tab label */
- .tabs label {
-   padding: 10px 20px;
-   cursor: pointer;
-   margin-right: 5px;
-   border: 1px solid transparent;
-   border-top-left-radius: 5px;
-   border-top-right-radius: 5px;
-   transition: background 0.3s;
- }
+/* Header Styling */
+header {
+  background: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
 
- .tabs label:hover {
-   background: #d9d9d9;
- }
+header h1 {
+  margin-bottom: 10px;
+}
 
- /* Hide the radio buttons */
- .tabs input[type="radio"] {
-   display: none;
- }
+/* Navigation Bar */
+nav {
+  background: #444;
+  display: flex;
+  justify-content: center;
+}
 
- /* Content sections for each tab */
- .content {
-   display: none;
-   padding: 20px;
-   background: white;
- }
+nav a {
+  color: #fff;
+  padding: 14px 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+}
 
- /* Show the content corresponding to the checked radio button */
- #tab1:checked ~ .content1,
- #tab2:checked ~ .content2,
- #tab3:checked ~ .content3 {
-   display: block;
- }
+nav a:hover {
+  background: #555;
+}
 
- /* Style for active tab label */
- #tab1:checked + label,
- #tab2:checked + label,
- #tab3:checked + label {
-   background: white;
-   border: 1px solid #ccc;
-   border-bottom: 1px solid white;
- }
+/* Tabs Section */
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
 
- /* Image styling (optional) */
- .content img {
-   max-width: 100%;
-   height: auto;
-   margin: 10px 0;
-   border: 1px solid #ddd;
-   border-radius: 4px;
- }
+.tabs input[type="radio"] {
+  display: none;
+}
+
+.tabs label {
+  padding: 10px 20px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  background: #eaeaea;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+.tabs label:hover {
+  background: #dcdcdc;
+}
+
+.tabs input[type="radio"]:checked + label {
+  background: #fff;
+  border-color: #ccc;
+}
+
+/* Main Content Container */
+.content {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Gallery Grid for GIFs */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 20px;
+  margin-top: 20px;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  transition: transform 0.3s;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* Tab Content (hidden by default) */
+.tab-content {
+  display: none;
+}
+
+/* Display the right content when a tab is selected */
+#tab1:checked ~ .content .content1,
+#tab2:checked ~ .content .content2,
+#tab3:checked ~ .content .content3 {
+  display: block;
+}
+
+/* Footer Styling */
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 20px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+  nav a {
+    padding: 10px;
+    font-size: 12px;
+  }
+  .tabs label {
+    padding: 8px 16px;
+  }
+}
